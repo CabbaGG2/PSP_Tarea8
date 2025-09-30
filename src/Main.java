@@ -17,11 +17,11 @@ public class Main extends Thread {
      */
     @Override
     public void run() {
-        for (int i = 0; i < nivelPaciencia; i++) {
-            if (i == nivelPaciencia - 1) {
-                System.out.println("[" + getName() + "]" + "Soy " + getName() + " y he terminado mi paciencia.");
+        for (int i = 0; i <= nivelPaciencia; i++) {
+            if (i == nivelPaciencia) {
+                System.out.println("[" + getName() + "]:" + " Soy " + getName() + " y he terminado mi paciencia.");
             } else {
-                System.out.println("[" + getName() + "]" + "Soy " + getName() + " y me quedan " + (nivelPaciencia - i) + " niveles de paciencia.");
+                System.out.println("[" + getName() + "]:" + " Soy " + getName() + " y me quedan " + (nivelPaciencia - i) + " niveles de paciencia.");
                 try {
                     Main.sleep(2000);
                 } catch (InterruptedException e) {
@@ -35,7 +35,7 @@ public class Main extends Thread {
      * El método main es el punto de entrada. Crea y lanza varios
      * hilos con diferentes niveles de paciencia y luego imprime un mensaje
      * para indicar que el hilo principal ha terminado sus tareas.
-     * @param args
+     * @param args Argumentos de línea de comandos (no se usan).
      */
     public static void main(String[] args) {
         System.out.println("Programa inicializado");
